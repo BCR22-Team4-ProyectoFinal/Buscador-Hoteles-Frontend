@@ -1,0 +1,66 @@
+
+/* image background*/
+body{
+    background: url("../resources/Searchs_125.png");
+}
+
+
+#div1,
+#div2 {
+    border: 1px solid black;
+    border-bottom: 2px;
+    border-right: 2px;
+
+}
+
+#div4 {
+    border: 1px solid black; 
+
+}
+
+#div7,
+#div8 {
+    border: 1px solid black;
+    border-bottom: 2px;
+
+}
+
+#div9,
+#div10 {
+    border: 1px solid black;
+    border-right: 2px;
+
+}
+
+#div0 {
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+ 
+#div1 {
+    background-color: lightskyblue;
+}
+
+#div2 {
+    background-color: lightgrey;
+}
+
+#div4 {
+    background-color: lightgrey;
+}
+
+#div7 {
+    background-color: lightskyblue;
+}
+
+#div8 {
+    background-color: lightgrey;
+}
+
+#div9 {
+    background-color: lightskyblue;
+}
+
+#div10 {
+    background-color: lightgrey;
+}
