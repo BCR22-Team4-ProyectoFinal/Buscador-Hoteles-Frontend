@@ -1,0 +1,157 @@
+#container {
+  padding-top: 25px;
+  padding-bottom: 40px;
+}
+
+#tilt {
+  padding-left: 17px;
+  padding-bottom: 40px;
+}
+
+#spacer {
+  padding-top: 150px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: whitesmoke;
+}
+
+/* image background*/
+body{
+  background: url("../resources/Searchs_132.png");
+}
+
+
+/* left & top sides */
+#div1,
+#div2 {
+  border: 1px solid black;
+  border-bottom: 2px;
+  border-right: 2px;
+
+}
+
+/* all sides */
+#div3,
+#div4 {
+  border: 1px solid black; 
+
+}
+
+
+/* top & right sides */
+#div5,
+#div6 {
+  border: 1px solid black;
+  border-bottom: 2px;
+  border-left: 2px;
+
+}
+
+/* left, top & right sides */
+#div7,
+#div8 {
+  border: 1px solid black;
+  border-bottom: 2px;
+
+}
+
+/* left, top & bottom sides */
+#div9,
+#div10 {
+  border: 1px solid black;
+  border-right: 2px;
+
+}
+
+/* buscador  */
+#div11,
+#div12 {
+  border: 1px solid black;
+  border-right: 2px;
+
+}
+
+/* interleaved background colors */   
+#div1 {
+  background-color: lightskyblue;
+}
+
+#div2 {
+  background-color: lightgrey;
+}
+
+#div3 {
+  background-color: lightskyblue
+}
+
+#div4 {
+  background-color: lightgrey;
+}
+
+#div5 {
+  background-color: lightskyblue;
+}
+
+#div6 {
+  background-color: lightgrey;
+}
+
+#div7 {
+  background-color: lightskyblue;
+}
+
+#div8 {
+  background-color: lightgrey;
+}
+
+#div9 {
+  background-color: lightskyblue;
+}
+
+#div10 {
+  background-color: lightgrey;
+}
+
+#div11 {
+  background-color: lightskyblue;
+}
+
+#div12 {
+  background-color: lightgrey;
+}
+
+#div13 {
+  background-color: lightskyblue;
+}
+
+#div14 {
+  background-color: lightgrey;
+}
+
+#div15 {
+  background-color: lightskyblue;
+}
+
+#div16 {
+  background-color: lightgrey;
+}
+
+#div17 {
+  background-color: lightskyblue;
+}
+
+#div18 {
+  background-color: lightgrey;
+}
+
+#div19 {
+  background-color: lightskyblue;
+}
+
+#div20 {
+  background-color: lightgrey
+}
+
+#div21 {
+  background-color:  lightskyblue;
+}
+
