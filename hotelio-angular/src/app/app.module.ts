@@ -6,13 +6,17 @@ import { AppComponent } from './app.component';
 import { IndexAdminComponent } from './components/admin/index-admin/index-admin.component';
 import { HotelesAdminComponent } from './components/admin/hoteles-admin/hoteles-admin.component';
 import { AddhotelesAdminComponent } from './components/admin/addhoteles-admin/addhoteles-admin.component';
+import { HomeComponent } from './components/public/home/home.component';
+import { AddreservaUserComponent } from './components/users/addreserva-user/addreserva-user.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     IndexAdminComponent,
     HotelesAdminComponent,
-    AddhotelesAdminComponent
+    AddhotelesAdminComponent,
+    HomeComponent,
+    AddreservaUserComponent
   ],
   imports: [
     BrowserModule,
