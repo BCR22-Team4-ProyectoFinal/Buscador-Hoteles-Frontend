@@ -20,8 +20,8 @@ export class AuthService {
     this.user = null;
 
     this.user = {
-      "username": username,
-      "password": password
+      "nombreUsuario": username,
+      "contrasena": password
     };
 
     return this.http.post(AUTH_URL + 'login', JSON.stringify(this.user), { headers: { 'Content-Type': 'application/json'}});

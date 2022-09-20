@@ -8,14 +8,14 @@
         <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
       </div>
       <span>or use your email for registration</span>
-      <input type="text" placeholder="Name" />
+      <input type="text" placeholder="Name"/>
       <input type="email" placeholder="Email" />
       <input type="password" placeholder="Password" />
       <button>Sign Up</button>
     </form>
   </div>
   <div class="form-container sign-in-container">
-    <form action="#">
+    <form *ngIf="!isLoggedIn" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm">
       <h1>Sign in</h1>
       <div class="social-container">
         <a href="#" class="social"><i class="bi bi-facebook"></i></a>
@@ -23,10 +23,23 @@
         <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
       </div>
       <span>or use your account</span>
-      <input type="email" placeholder="Email" />
-      <input type="password" placeholder="Password" />
-      <a href="#">Forgot your password?</a>
-      <button>Sign In</button>
+      <div class="form-group">
+        <input type="text" placeholder="Username" class="form-control" name="username" [(ngModel)]="form.username" #username="ngModel" required>
+        <div class="alert-danger" role="alert" *ngIf="username.errors && f.submitted">
+          <div *ngIf="username.errors?.['required']">Username is required</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="password" placeholder="Password" class="form-control" name="password" [(ngModel)]="form.password" #password="ngModel" required/>
+        <div class="alert-danger" *ngIf="password.errors && f.submitted">
+          <div *ngIf="password.errors?.['required']">Password is required</div>
+          <div *ngIf="password.errors?.['minlength']">Password must be at least 6 characters</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <button>Sign In</button>
+      </div>
+
     </form>
   </div>
   <div class="overlay-container">
@@ -44,6 +57,9 @@
         <button class="ghost" id="signUp" onclick="addClass()">Sign Up</button>
       </div>
     </div>
+  </div>
+  <div class="alert alert-success" *ngIf="isLoggedIn">
+    Logged in as {{roles}}.
   </div>
 </div>
 
