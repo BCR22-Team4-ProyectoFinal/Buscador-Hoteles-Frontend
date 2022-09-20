@@ -1,1 +1,32 @@
-<p>addhoteles-admin works!</p>
+<div>
+  <div class="submit-form">
+    <div *ngIf="!guardado">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" class="form-control" required [(ngModel)]="hotel.nombre">
+      </div>
+      <div class="form-group">
+        <label for="status">Status</label>
+        <input type="text" name="status" id="status" class="form-control" required [(ngModel)]="hotel.categoria">
+      </div>
+      <div class="form-group">
+        <label for="specie">Specie</label>
+        <input type="text" name="specie" id="specie" class="form-control" required [(ngModel)]="hotel.poblacion">
+      </div>
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <input type="text" name="gender" id="gender" class="form-control" required [(ngModel)]="hotel.latitud">
+      </div>
+      <div class="form-group">
+        <label for="origin">Origin</label>
+        <input type="text" name="origin" id="origin" class="form-control" required [(ngModel)]="hotel.longitud">
+      </div>
+      <button  class="btn btn-success m-2">Submit</button>
+    </div>
+
+    <div *ngIf="guardado">
+      <h4>Personaje guardado correctamente</h4>
+      <button class="btn btn-success" >Añadir</button>
+    </div>
+  </div>
+</div>

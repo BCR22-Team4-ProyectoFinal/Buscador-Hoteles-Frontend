@@ -8,6 +8,12 @@ import { HotelesAdminComponent } from './components/admin/hoteles-admin/hoteles-
 import { AddhotelesAdminComponent } from './components/admin/addhoteles-admin/addhoteles-admin.component';
 import { HomeComponent } from './components/public/home/home.component';
 import { AddreservaUserComponent } from './components/users/addreserva-user/addreserva-user.component';
+import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { InfoHotelesComponent } from './components/admin/info-hoteles/info-hoteles.component';
+import { LoginComponent } from './components/public/login/login.component';
+import { AuthInterceptor } from './_helper/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -16,13 +22,20 @@ import { AddreservaUserComponent } from './components/users/addreserva-user/addr
     HotelesAdminComponent,
     AddhotelesAdminComponent,
     HomeComponent,
-    AddreservaUserComponent
+    AddreservaUserComponent,
+    DashboardComponent,
+    InfoHotelesComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi:true}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-addhoteles-admin',
-  templateUrl: './addhoteles-admin.component.html',
-  styleUrls: ['./addhoteles-admin.component.css']
+  selector: 'app-info-hoteles',
+  templateUrl: './info-hoteles.component.html',
+  styleUrls: ['./info-hoteles.component.css']
 })
-export class AddhotelesAdminComponent implements OnInit {
+export class InfoHotelesComponent implements OnInit {
 
-  guardado:boolean=false;
   hotel:any = {
     nombre:'',
     categoria:'',

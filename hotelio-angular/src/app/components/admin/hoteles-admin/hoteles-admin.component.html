@@ -1,1 +1,180 @@
-<p>hoteles-admin works!</p>
+<div class="container">
+  <br>
+  <div class="row">
+      <h1 class="text-primary">Listado de Usuarios del sistema</h1>
+  </div>
+
+  <div class="row">
+      <div class="d-flex justify-content-between">
+          <div>
+              Mostrar
+              <select name="registros" id="registers">
+                  <option value="volvo">10</option>
+                  <option value="saab">8</option>
+                  <option value="opel">5</option>
+                  <option value="audi">3</option>
+              </select>
+              registros
+          </div>
+          <div>
+              Buscar:
+              <input type="text">
+          </div>
+      </div>
+  </div>
+  <br>
+  <div class="row">
+      <table class="table table-bordered">
+          <thead>
+              <tr>
+                  <th scope="col">
+                      <div class="d-flex justify-content-between">
+                          <div>ID</div>
+                          <div >
+                              <i class="bi bi-arrow-up-short"></i>
+                              <i class="bi bi-arrow-down-short text-secondary"></i>
+                          </div>
+                      </div>
+                      <span class="float-right"></span></th>
+                  <th scope="col">
+                      <div class="d-flex justify-content-between">
+                          <div>Nombre</div>
+                          <div class="text-secondary">
+                              <i class="bi bi-arrow-up-short"></i>
+                              <i class="bi bi-arrow-down-short"></i>
+                          </div>
+                      </div>
+                  </th>
+                  <th scope="col">
+                      <div class="d-flex justify-content-between">
+                          <div>Poblacion</div>
+                          <div class="text-secondary">
+                              <i class="bi bi-arrow-up-short"></i>
+                              <i class="bi bi-arrow-down-short"></i>
+                          </div>
+                      </div>
+                  </th>
+                  <th scope="col">
+                      <div class="d-flex justify-content-between">
+                          <div>Acción</div>
+                          <div class="text-secondary">
+                              <i class="bi bi-arrow-up-short"></i>
+                              <i class="bi bi-arrow-down-short"></i>
+                          </div>
+                      </div>
+                  </th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr class="table-secondary" *ngFor="let hotel of hoteles">
+                  <th scope="row">{{hotel.id}}</th>
+                  <td>{{hotel.nombre}}</td>
+                  <td>{{hotel.poblacion_id}}</td>
+                  <td>
+                      <button type="button" class="btn btn-primary">
+                          <i class="bi bi-eye-fill"></i>
+                      </button>
+                      <button type="button" class="btn btn-success">
+                          <i class="bi bi-pencil-square"></i>
+                      </button>
+                      <button type="button" class="btn btn-danger">
+                          <i class="bi bi-trash"></i>
+                      </button>
+                  </td>
+              </tr>
+              <tr>
+                  <th scope="row">2</th>
+                  <td>marcelo</td>
+                  <td>Administración</td>
+                  <td>
+                      <button type="button" class="btn btn-primary">
+                          <i class="bi bi-eye-fill"></i>
+                      </button>
+                      <button type="button" class="btn btn-success">
+                          <i class="bi bi-pencil-square"></i>
+                      </button>
+                      <button type="button" class="btn btn-danger">
+                          <i class="bi bi-trash"></i>
+                      </button>
+                  </td>
+              </tr>
+              <tr class="table-secondary">
+                  <th scope="row">3</th>
+                  <td>eduardo</td>
+                  <td>Producción</td>
+                  <td>
+                      <button type="button" class="btn btn-primary">
+                          <i class="bi bi-eye-fill"></i>
+                      </button>
+                      <button type="button" class="btn btn-success">
+                          <i class="bi bi-pencil-square"></i>
+                      </button>
+                      <button type="button" class="btn btn-danger">
+                          <i class="bi bi-trash"></i>
+                      </button>
+                  </td>
+              </tr>
+              <tr>
+                  <th scope="row">4</th>
+                  <td>jorge</td>
+                  <td>Administración</td>
+                  <td>
+                      <button type="button" class="btn btn-primary">
+                          <i class="bi bi-eye-fill"></i>
+                      </button>
+                      <button type="button" class="btn btn-success">
+                          <i class="bi bi-pencil-square"></i>
+                      </button>
+                      <button type="button" class="btn btn-danger">
+                          <i class="bi bi-trash"></i>
+                      </button>
+                  </td>
+              </tr>
+              <tr class="table-secondary">
+                  <th scope="row">7</th>
+                  <td>gaston</td>
+                  <td>Producción</td>
+                  <td>
+                      <button type="button" class="btn btn-primary">
+                          <i class="bi bi-eye-fill"></i>
+                      </button>
+                      <button type="button" class="btn btn-success">
+                          <i class="bi bi-pencil-square"></i>
+                      </button>
+                      <button type="button" class="btn btn-danger">
+                          <i class="bi bi-trash"></i>
+                      </button>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+  </div>
+
+  <div class="row">
+
+      <div class="d-flex justify-content-between">
+          <p>
+              Mostrando del 1 al 5 de un total de 5 registros
+          </p>
+          <ul class="pagination">
+              <li class="page-item text-secondary">
+                  <a class="page-link text-secondary">Anterior</a>
+              </li>
+              <li class="page-item">
+                  <a class="page-link active" href="#">1</a>
+              </li>
+              <li class="page-item ">
+                  <a class="page-link text-secondary" href="#">Siguiente</a>
+              </li>
+          </ul>
+      </div>
+
+  </div>
+
+  <div class="row">
+      <div>
+          <button type="button" class="btn btn-primary">Agregar Hotel</button>
+      </div>
+  </div>
+
+</div>
