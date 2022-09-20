@@ -4,6 +4,7 @@ import { AddhotelesAdminComponent } from './components/admin/addhoteles-admin/ad
 import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
 import { HotelesAdminComponent } from './components/admin/hoteles-admin/hoteles-admin.component';
 import { IndexAdminComponent } from './components/admin/index-admin/index-admin.component';
+import { InfoHotelesComponent } from './components/admin/info-hoteles/info-hoteles.component';
 import { LoginComponent } from './components/public/login/login.component';
 import { AddreservaUserComponent } from './components/users/addreserva-user/addreserva-user.component';
 
@@ -19,10 +20,10 @@ const routes: Routes = [
   },
   {
     path:'admin/dashboard',
-    component: DashboardComponent
+    component: DashboardComponent,
   },
   {
-    path: 'admin/addHotel',
+    path: 'admin/hoteles/addHotel',
     component: AddhotelesAdminComponent
   },
   {
@@ -36,7 +37,12 @@ const routes: Routes = [
   {
     path: 'login',
     component: LoginComponent
+  },
+  {
+    path: 'admin/hoteles/:id',
+    component: InfoHotelesComponent
   }
+
 ];
 
 @NgModule({

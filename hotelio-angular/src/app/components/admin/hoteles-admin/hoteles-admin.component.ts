@@ -14,7 +14,6 @@ export class HotelesAdminComponent implements OnInit {
   ngOnInit(): void {
     this.hotelService.getAll().subscribe(
       data =>{
-        console.log(data)
         this.hoteles = data;
       }
     )

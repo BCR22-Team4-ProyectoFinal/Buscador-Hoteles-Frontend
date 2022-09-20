@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { HotelesService } from 'src/app/services/hoteles.service';
 
 @Component({
   selector: 'app-info-hoteles',
@@ -14,10 +16,19 @@ export class InfoHotelesComponent implements OnInit {
     longitud:'',
     latitud:''
   }
+  id: any = [];
+  mensaje='';
 
-  constructor() { }
+  constructor(private datosService: HotelesService, private activeRoute: ActivatedRoute,private router:Router) {
+    this.id = parseInt(this.activeRoute.snapshot.paramMap.get('id') || '[]');
+  }
 
   ngOnInit(): void {
+    this.datosService.get(this.id).subscribe(
+      results => {
+        this.hotel = results
+      }
+    );
   }
 
 }

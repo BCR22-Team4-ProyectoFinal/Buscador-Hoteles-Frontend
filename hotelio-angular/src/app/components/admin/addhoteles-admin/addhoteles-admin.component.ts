@@ -15,6 +15,7 @@ export class AddhotelesAdminComponent implements OnInit {
     longitud:'',
     latitud:''
   }
+  poblaciones:any[] = [];
 
   constructor() { }
 
