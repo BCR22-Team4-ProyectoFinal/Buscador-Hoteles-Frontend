@@ -1,0 +1,24 @@
+
+#container {
+    padding-top: 25px;
+    padding-bottom: 40px;
+  }
+  
+  #tilt {
+    padding-right: 45px;
+  }
+
+  #chart {
+    padding-left: 80px;
+  }
+
+  #spacer {
+    padding-top: 150px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: whitesmoke;
+  }
+  
+  /* image background*/
+  body{
+    background: url("https://mdbootstrap.com/img/Photos/Horizontal/Nature/full page/img(20).webp");
+  } 

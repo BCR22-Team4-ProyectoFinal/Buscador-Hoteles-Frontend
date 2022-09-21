@@ -8,6 +8,9 @@ import { InfoHotelesComponent } from './components/admin/info-hoteles/info-hotel
 import { LoginComponent } from './components/public/login/login.component';
 import { AddreservaUserComponent } from './components/users/addreserva-user/addreserva-user.component';
 
+import { BuscadorInicioComponent } from './components/public/buscador-inicio/buscador-inicio.component';
+import { BuscadorMapaComponent } from './components/public/buscador-mapa/buscador-mapa.component';
+
 const routes: Routes = [
   {
     path: '',
@@ -15,11 +18,19 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
+    path: 'public/inicio',
+    component: BuscadorInicioComponent
+  },
+  {
+    path: 'public/mapa',
+    component: BuscadorMapaComponent
+  },
+  {
     path: 'admin',
     component: IndexAdminComponent
   },
   {
-    path:'admin/dashboard',
+    path: 'admin/dashboard',
     component: DashboardComponent,
   },
   {
@@ -27,7 +38,7 @@ const routes: Routes = [
     component: AddhotelesAdminComponent
   },
   {
-    path:'admin/hoteles',
+    path: 'admin/hoteles',
     component: HotelesAdminComponent
   },
   {
