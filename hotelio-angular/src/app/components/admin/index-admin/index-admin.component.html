@@ -1,20 +1,3 @@
-  <nav class="navbar navbar-expand-lg bg-light">
-      <div class="container-fluid">
-        <span class="navbar-brand mb-0 h1">HO<span style="color: brown;">T</span>ELIO</span>
-        <ul class="navbar-nav mb-2 mb-lg-0">
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              <img src="https://rickandmortyapi.com/api/character/avatar/501.jpeg" alt="" width="40" height="40" class="rounded-circle">
-            </a>
-            <ul class="dropdown-menu dropdown-menu-end">
-              <li><a class="dropdown-item" href="#">Perfil</a></li>
-              <li><a class="dropdown-item" href="#">Panel de Control</a></li>
-              <li><a class="dropdown-item" href="#" >Cerrar sesion</a></li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-  </nav>
   <div class="row mt-2">
       <div class="col-2 vh-100 bg-danger">
           <nav class="navbar navbar-expand-lg">
@@ -26,19 +9,19 @@
                       <a class="nav-link active fs-4" [routerLink]="['dashboard']">Dashboard</a>
                   </li>
                   <li class="nav-item mb-2">
-                      <a class="nav-link fs-4" href="#">Reservas</a>
+                      <a class="nav-link fs-4" routerLink="reservas">Reservas</a>
                   </li>
                   <li class="nav-item mb-2">
                       <a class="nav-link fs-4" href="#">Usuarios</a>
                   </li>
                   <li class="nav-item mb-2 dropend">
-                      <a class="nav-link dropdown-toggle fs-4" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Hoteles</a>
+                      <a class="nav-link dropdown-toggle fs-4" href="#" routerLink="hoteles" role="button" data-bs-toggle="dropdown" aria-expanded="false">Hoteles</a>
                       <ul class="dropdown-menu">
-                          <li><a class="dropdown-item" href="#">Habitaciones</a></li>
+                          <li><a class="dropdown-item" routerLink="habitaciones">Habitaciones</a></li>
                       </ul>
                   </li>
                   <li class="nav-item mb-2">
-                      <a class="nav-link fs-4" href="#">Poblaciones</a>
+                      <a class="nav-link fs-4" routerLink="poblaciones">Poblaciones</a>
                   </li>
               </ul>
           </nav>
@@ -102,7 +85,7 @@
                               <h2>44</h2>
                           </div>
                       </div>
-                    <button class="btn btn-danger" [routerLink]="['poblaciones']">See more</button>
+                    <button class="btn btn-danger" routerLink="poblaciones">See more</button>
                   </div>
               </div>
             </div>

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { BuscadorInicioComponent } from './buscador-inicio.component';
+import { ReservasAdminComponent } from './reservas-admin.component';
 
-describe('BuscadorInicioComponent', () => {
-  let component: BuscadorInicioComponent;
-  let fixture: ComponentFixture<BuscadorInicioComponent>;
+describe('ReservasAdminComponent', () => {
+  let component: ReservasAdminComponent;
+  let fixture: ComponentFixture<ReservasAdminComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BuscadorInicioComponent ]
+      declarations: [ ReservasAdminComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(BuscadorInicioComponent);
+    fixture = TestBed.createComponent(ReservasAdminComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

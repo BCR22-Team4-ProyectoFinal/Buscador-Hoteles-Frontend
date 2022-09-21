@@ -7,8 +7,15 @@
         <li class="nav-item" *ngIf="!isLoggedIn">
           <a class="nav-link" href="" routerLink="login" routerLinkActive="router-link-active" >Iniciar Sesión/Regístrate</a>
         </li>
-        <li class="nav-item" *ngIf="isLoggedIn">
-          <a class="nav-link" href="" routerLinkActive="router-link-active" (click)="logout()">LogOut</a>
+        <li class="nav-item dropdown" *ngIf="isLoggedIn">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="https://rickandmortyapi.com/api/character/avatar/501.jpeg" alt="" width="40" height="40" class="rounded-circle">
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="#">Perfil</a></li>
+            <li><a class="dropdown-item" href="#">Panel de Control</a></li>
+            <li><a class="dropdown-item" href="#" (click)="logout()">Cerrar sesion</a></li>
+          </ul>
         </li>
       </ul>
     </div>

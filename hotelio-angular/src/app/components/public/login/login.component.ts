@@ -21,6 +21,8 @@ export class LoginComponent implements OnInit {
   errorMessage = '';
   roles:any = null;
 
+  container = document.getElementById('container');
+
   constructor(private authService: AuthService, private tokenStorageService: TokenStorageService,private router: Router) { }
 
   ngOnInit(): void {
@@ -49,6 +51,16 @@ export class LoginComponent implements OnInit {
   }
   reloadPage() {
     window.location.reload();
+  }
+
+
+  addClass(){
+    console.log(this.container)
+    this.container?.classList.add("right-panel-active");
+  }
+
+  removeClass(){
+    this.container?.classList.remove("right-panel-active");
   }
 
 }

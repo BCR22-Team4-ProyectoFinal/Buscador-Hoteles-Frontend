@@ -1,0 +1,19 @@
+<div class="m-2">
+  <div class="row justify-content-center">
+    <div class="col-6 p-2 text-start border-start border-2">
+      <form>
+        <div class="form-group">
+          <label for="name">Nombre</label>
+          <input type="text" class="form-control" id="name" [(ngModel)]="poblacion.nombre" name="name">
+        </div>
+        <div class="form-group">
+          <label for="categoria">Codigo postal</label>
+          <input type="text" class="form-control" id="categoria" [(ngModel)]="poblacion.cp" name="categoria">
+        </div>
+      </form>
+      <button class="badge text-bg-danger mr-1" >Delete</button>
+      <button type="submit" class="badge text-bg-success m-2" >Update</button>
+      <p class="text-success"></p>
+    </div>
+  </div>
+</div>

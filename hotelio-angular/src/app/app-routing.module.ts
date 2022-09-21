@@ -11,6 +11,13 @@ import { AddreservaUserComponent } from './components/users/addreserva-user/addr
 
 import { BuscadorInicioComponent } from './components/public/buscador-inicio/buscador-inicio.component';
 import { BuscadorMapaComponent } from './components/public/buscador-mapa/buscador-mapa.component';
+import { HabitacionesAdminComponent } from './components/admin/habitaciones-admin/habitaciones-admin.component';
+import { InfoHabitacionesAdminComponent } from './components/admin/info-habitaciones-admin/info-habitaciones-admin.component';
+import { AddHabitacionesAdminComponent } from './components/admin/add-habitaciones-admin/add-habitaciones-admin.component';
+import { PoblacionesAdminComponent } from './components/admin/poblaciones-admin/poblaciones-admin.component';
+import { InfoPoblacionesAdminComponent } from './components/admin/info-poblaciones-admin/info-poblaciones-admin.component';
+import { AddPoblacionesAdminComponent } from './components/admin/add-poblaciones-admin/add-poblaciones-admin.component';
+import { ReservasAdminComponent } from './components/admin/reservas-admin/reservas-admin.component';
 
 const routes: Routes = [
   {
@@ -39,8 +46,28 @@ const routes: Routes = [
     component: AddhotelesAdminComponent
   },
   {
+    path: 'admin/habitaciones/addHabitacion',
+    component: AddHabitacionesAdminComponent
+  },
+  {
+    path: 'admin/poblaciones/addPoblacion',
+    component: AddPoblacionesAdminComponent
+  },
+  {
     path: 'admin/hoteles',
     component: HotelesAdminComponent
+  },
+  {
+    path: 'admin/habitaciones',
+    component: HabitacionesAdminComponent
+  },
+  {
+    path: 'admin/poblaciones',
+    component: PoblacionesAdminComponent
+  },
+  {
+    path: 'admin/reservas',
+    component: ReservasAdminComponent
   },
   {
     path: 'reserva',
@@ -53,6 +80,14 @@ const routes: Routes = [
   {
     path: 'admin/hoteles/:id',
     component: InfoHotelesComponent
+  },
+  {
+    path: 'admin/habitaciones/:id',
+    component: InfoHabitacionesAdminComponent
+  },
+  {
+    path: 'admin/poblaciones/:id',
+    component: InfoPoblacionesAdminComponent
   },
   {
     path: 'home',
