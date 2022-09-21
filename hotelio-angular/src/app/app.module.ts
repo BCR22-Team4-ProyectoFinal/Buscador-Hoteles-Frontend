@@ -22,6 +22,7 @@ import { InfoHabitacionesAdminComponent } from './components/admin/info-habitaci
 import { PoblacionesAdminComponent } from './components/admin/poblaciones-admin/poblaciones-admin.component';
 import { AddPoblacionesAdminComponent } from './components/admin/add-poblaciones-admin/add-poblaciones-admin.component';
 import { InfoPoblacionesAdminComponent } from './components/admin/info-poblaciones-admin/info-poblaciones-admin.component';
+import { AccountComponent } from './components/users/account/account.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { InfoPoblacionesAdminComponent } from './components/admin/info-poblacion
     InfoHabitacionesAdminComponent,
     PoblacionesAdminComponent,
     AddPoblacionesAdminComponent,
-    InfoPoblacionesAdminComponent
+    InfoPoblacionesAdminComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,
