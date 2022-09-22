@@ -14,7 +14,8 @@
 
     <div *ngIf="guardado">
       <h4>Personaje guardado correctamente</h4>
-      <button class="btn btn-success" >Añadir</button>
+      <button class="btn btn-success" (click)="newPoblacion()">Añadir</button>
+      <a class="btn" href="/admin/poblaciones"> Volver</a>
     </div>
   </div>
 </div>

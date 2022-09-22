@@ -29,6 +29,10 @@
       </div>
 
     </form>
+    <div class="alert alert-success" *ngIf="isLoggedIn">
+      Bienvenido {{form.username}} <br>
+      Clica sobre el logo para ir a la pagina principal
+    </div>
   </div>
   <div class="overlay-container">
     <div class="overlay">
@@ -46,9 +50,7 @@
       </div>
     </div>
   </div>
-  <div class="alert alert-success" *ngIf="isLoggedIn">
-    Logged in as {{roles}}.
-  </div>
+
 </div>
 
 <script src="./codigo.js"></script>

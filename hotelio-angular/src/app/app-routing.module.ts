@@ -18,6 +18,7 @@ import { PoblacionesAdminComponent } from './components/admin/poblaciones-admin/
 import { InfoPoblacionesAdminComponent } from './components/admin/info-poblaciones-admin/info-poblaciones-admin.component';
 import { AddPoblacionesAdminComponent } from './components/admin/add-poblaciones-admin/add-poblaciones-admin.component';
 import { ReservasAdminComponent } from './components/admin/reservas-admin/reservas-admin.component';
+import { InfoReservasAdminComponent } from './components/admin/info-reservas-admin/info-reservas-admin.component';
 
 const routes: Routes = [
   {
@@ -88,6 +89,10 @@ const routes: Routes = [
   {
     path: 'admin/poblaciones/:id',
     component: InfoPoblacionesAdminComponent
+  },
+  {
+    path: 'admin/reservas/:id',
+    component: InfoReservasAdminComponent
   },
   {
     path: 'home',

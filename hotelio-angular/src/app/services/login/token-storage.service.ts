@@ -1,8 +1,11 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
+import { UsuariosService } from '../usuarios.service';
 import { AuthService } from './auth.service';
 
 const TOKEN_KEY = 'auth-token';
 const USER_KEY = 'auth-user';
+const ROL_KEY = 'auth-rol';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +13,7 @@ const USER_KEY = 'auth-user';
 export class TokenStorageService {
 
 
-  constructor() { }
+  constructor(private usuarioService: UsuariosService,private router:Router) { }
 
   signOut(): void{
     window.sessionStorage.clear();
@@ -28,6 +31,7 @@ export class TokenStorageService {
   public saveUser(user:any):void{
     window.sessionStorage.removeItem(USER_KEY);
     window.sessionStorage.setItem(USER_KEY,JSON.stringify(user));
+    this.setRoles(user)
   }
 
   public getUser():any{
@@ -36,5 +40,21 @@ export class TokenStorageService {
       return JSON.parse(user);
     }
     return {};
+  }
+
+  public setRoles(user:any) {
+    this.usuarioService.getByUsername(user).subscribe(
+      data =>{
+        console.log(data["rol"])
+        window.sessionStorage.removeItem(ROL_KEY);
+        window.sessionStorage.setItem(ROL_KEY,data["rol"])
+      }
+    )
+
+
+  }
+
+  public getRoles() {
+    return window.sessionStorage.getItem(ROL_KEY);
   }
 }

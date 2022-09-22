@@ -2,7 +2,7 @@
   <!-- As a heading -->
   <nav class="navbar bg-light">
     <div class="container-fluid">
-      <a href="" class="navbar-brand"><span class="navbar-brand mb-0 h1">HO<span style="color: brown;">T</span>ELIO</span></a>
+      <a class="navbar-brand" (click)="home()"><span class="navbar-brand mb-0 h1">HO<span style="color: brown;">T</span>ELIO</span></a>
       <ul class="nav justify-content-center">
         <li class="nav-item" *ngIf="!isLoggedIn">
           <a class="nav-link" href="" routerLink="login" routerLinkActive="router-link-active" >Iniciar Sesión/Regístrate</a>
@@ -13,7 +13,7 @@
           </a>
           <ul class="dropdown-menu dropdown-menu-end">
             <li><a class="dropdown-item" href="#">Perfil</a></li>
-            <li><a class="dropdown-item" href="#">Panel de Control</a></li>
+            <li><a class="dropdown-item" href="/admin" *ngIf="role == 'ADMIN'">Panel de Control</a></li>
             <li><a class="dropdown-item" href="#" (click)="logout()">Cerrar sesion</a></li>
           </ul>
         </li>

@@ -21,7 +21,7 @@
 
 /* image background*/
 body{
-  background: url("../../sources/Searchs_132.png");
+  background: url("../../../sources/Searchs_132.png");
 }
 
 #div1,
@@ -33,7 +33,7 @@ body{
 }
 
 #div4 {
-    border: 1px solid white; 
+    border: 1px solid white;
 
 }
 
@@ -53,7 +53,7 @@ body{
 #comic{
     font-family: 'Comic Sans MS';
 }
- 
- 
+
+
 
 

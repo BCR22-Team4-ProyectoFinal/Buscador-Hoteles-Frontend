@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { TokenStorageService } from './services/login/token-storage.service';
 
 @Component({
@@ -10,13 +11,26 @@ export class AppComponent {
   title = 'hotelio-angular';
 
   isLoggedIn:boolean=false;
-  constructor(private tokenStorageService: TokenStorageService){
+  role:any;
+  constructor(private tokenStorageService: TokenStorageService,private router:Router){
 
   }
 
   ngOnInit(){
     if (this.tokenStorageService.getToken()) {
       this.isLoggedIn = true;
+      this.role = this.tokenStorageService.getRoles();
+    }
+  }
+
+  home(){
+
+    if (this.role == "ADMIN") {
+      this.router.navigate(['/admin']);
+    }
+    else
+    {
+      this.router.navigate(['/home']);
     }
   }
 

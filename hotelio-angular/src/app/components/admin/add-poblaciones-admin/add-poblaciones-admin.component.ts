@@ -19,8 +19,19 @@ export class AddPoblacionesAdminComponent implements OnInit {
   }
 
   onSubmit(){
-    this.poblacionesService.create(this.poblacion).subscribe();
-    this.router.navigate(['admin/poblaciones']);
+    this.poblacionesService.create(this.poblacion).subscribe(
+      data =>{
+        this.guardado = true;
+      }
+    );
+  }
+
+  newPoblacion(){
+    this.guardado = false;
+    this.poblacion = {
+      nombre:'',
+      cp: ''
+    }
   }
 
 }

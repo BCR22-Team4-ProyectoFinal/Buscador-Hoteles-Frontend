@@ -36,19 +36,29 @@ export class LoginComponent implements OnInit {
 
     this.authService.login(username,password).subscribe(
       data => {
-        console.log(data)
         this.tokenStorageService.saveToken(data["token"]);
         this.tokenStorageService.saveUser(username);
         this.isLoginFailed = false;
         this.isLoggedIn = true;
-        this.reloadPage();
+
+        setTimeout(() =>
+          {
+
+            this.reloadPage();
+
+          },
+          2000);
+
       },
       err =>{
         this.errorMessage = err.message;
         this.isLoginFailed= true;
       }
     )
+
   }
+
+
   reloadPage() {
     window.location.reload();
   }

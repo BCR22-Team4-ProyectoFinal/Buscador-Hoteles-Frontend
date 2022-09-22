@@ -1,1 +1,31 @@
-<p>info-reservas-admin works!</p>
+<div class="m-2">
+  <div class="row justify-content-center">
+    <div class="col-3 p-2 text-start border-start border-2">
+      <form>
+        <div class="form-group">
+          <label for="name">Usuario</label>
+          <input type="text" class="form-control" id="name" [(ngModel)]="reserva.usuario.nombreUsuario" name="name">
+        </div>
+        <div class="form-group">
+          <label for="categoria">Hotel</label>
+          <input type="text" class="form-control" id="categoria" [(ngModel)]="reserva.habitacion.hotel.nombre" name="categoria">
+        </div>
+        <div class="form-group">
+          <label for="poblacion">Poblacion</label>
+          <input type="text" class="form-control" id="poblacion" [(ngModel)]="reserva.habitacion.hotel.poblacion.nombre" name="poblacion">
+        </div>
+        <div class="form-group">
+          <label for="latitud">Adultos</label>
+          <input type="text" class="form-control" id="latitud" [(ngModel)]="reserva.num_adultos" name="latitud">
+        </div>
+        <div class="form-group">
+          <label for="longitud">Niños</label>
+          <input type="text" class="form-control" id="longitud" [(ngModel)]="reserva.num_ninos" name="longitud">
+        </div>
+      </form>
+      <button class="badge text-bg-danger mr-1" >Delete</button>
+      <button type="submit" class="badge text-bg-success m-2" >Update</button>
+      <p class="text-success"></p>
+    </div>
+  </div>
+</div>
