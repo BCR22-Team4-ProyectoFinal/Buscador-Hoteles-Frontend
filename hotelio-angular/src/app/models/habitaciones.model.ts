@@ -5,5 +5,5 @@ export class Habitaciones {
     precio_noche?: number;
     num_personas?: number;
     planta?: number;
-    hotel_id?: number;
+    hotel?: number;
 }
