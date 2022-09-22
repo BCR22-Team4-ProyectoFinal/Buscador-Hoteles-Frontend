@@ -12,7 +12,8 @@
             <img src="https://rickandmortyapi.com/api/character/avatar/501.jpeg" alt="" width="40" height="40" class="rounded-circle">
           </a>
           <ul class="dropdown-menu dropdown-menu-end">
-            <li><a class="dropdown-item" href="#">Perfil</a></li>
+            <li><a class="dropdown-item" href="/profile">Perfil</a></li>
+            <li><a class="dropdown-item" href="" *ngIf="role != 'ADMIN'">Reservas</a></li>
             <li><a class="dropdown-item" href="/admin" *ngIf="role == 'ADMIN'">Panel de Control</a></li>
             <li><a class="dropdown-item" href="#" (click)="logout()">Cerrar sesion</a></li>
           </ul>

@@ -8,7 +8,6 @@ import { HotelesAdminComponent } from './components/admin/hoteles-admin/hoteles-
 import { AddhotelesAdminComponent } from './components/admin/addhoteles-admin/addhoteles-admin.component';
 import { HomeComponent } from './components/public/home/home.component';
 import { AddreservaUserComponent } from './components/users/addreserva-user/addreserva-user.component';
-import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { InfoHotelesComponent } from './components/admin/info-hoteles/info-hoteles.component';
@@ -23,6 +22,8 @@ import { PoblacionesAdminComponent } from './components/admin/poblaciones-admin/
 import { AddPoblacionesAdminComponent } from './components/admin/add-poblaciones-admin/add-poblaciones-admin.component';
 import { InfoPoblacionesAdminComponent } from './components/admin/info-poblaciones-admin/info-poblaciones-admin.component';
 import { AccountComponent } from './components/users/account/account.component';
+import { UsuariosComponent } from './components/admin/usuarios/usuarios.component';
+import { InfoUsuariosComponent } from './components/admin/info-usuarios/info-usuarios.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,6 @@ import { AccountComponent } from './components/users/account/account.component';
     AddhotelesAdminComponent,
     HomeComponent,
     AddreservaUserComponent,
-    DashboardComponent,
     InfoHotelesComponent,
     LoginComponent,
     ReservasAdminComponent,
@@ -43,7 +43,9 @@ import { AccountComponent } from './components/users/account/account.component';
     PoblacionesAdminComponent,
     AddPoblacionesAdminComponent,
     InfoPoblacionesAdminComponent,
-    AccountComponent
+    AccountComponent,
+    UsuariosComponent,
+    InfoUsuariosComponent
   ],
   imports: [
     BrowserModule,

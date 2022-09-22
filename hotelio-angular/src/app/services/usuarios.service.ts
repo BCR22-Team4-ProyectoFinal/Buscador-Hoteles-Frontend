@@ -11,6 +11,26 @@ export class UsuariosService {
 
   constructor(private http:HttpClient) { }
 
+  getAll(): Observable<any[]>{
+    return this.http.get<any[]>(apiUrl);
+  }
+
+  get(id:any):Observable<any>{
+    return this.http.get(`${apiUrl}/${id}`);
+  }
+
+  create(datos:any): Observable<any>{
+    return this.http.post(apiUrl,datos);
+  }
+
+  update(id:any,datos:any):Observable<any>{
+    return this.http.put(`${apiUrl}/${id}`,datos);
+  }
+
+  delete(id:any):Observable<any>{
+    return this.http.delete(`${apiUrl}/${id}`);
+  }
+
   getByUsername(username:any):Observable<any>{
     return this.http.get(`${apiUrl}/username/${username}`);
   }

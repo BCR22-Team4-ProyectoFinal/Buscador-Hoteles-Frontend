@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AddhotelesAdminComponent } from './components/admin/addhoteles-admin/addhoteles-admin.component';
-import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
 import { HotelesAdminComponent } from './components/admin/hoteles-admin/hoteles-admin.component';
 import { IndexAdminComponent } from './components/admin/index-admin/index-admin.component';
 import { InfoHotelesComponent } from './components/admin/info-hoteles/info-hoteles.component';
@@ -19,6 +18,9 @@ import { InfoPoblacionesAdminComponent } from './components/admin/info-poblacion
 import { AddPoblacionesAdminComponent } from './components/admin/add-poblaciones-admin/add-poblaciones-admin.component';
 import { ReservasAdminComponent } from './components/admin/reservas-admin/reservas-admin.component';
 import { InfoReservasAdminComponent } from './components/admin/info-reservas-admin/info-reservas-admin.component';
+import { UsuariosComponent } from './components/admin/usuarios/usuarios.component';
+import { InfoUsuariosComponent } from './components/admin/info-usuarios/info-usuarios.component';
+import { AccountComponent } from './components/users/account/account.component';
 
 const routes: Routes = [
   {
@@ -27,20 +29,12 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'public/inicio',
-    component: BuscadorInicioComponent
-  },
-  {
     path: 'public/mapa',
     component: BuscadorMapaComponent
   },
   {
     path: 'admin',
     component: IndexAdminComponent
-  },
-  {
-    path: 'admin/dashboard',
-    component: DashboardComponent,
   },
   {
     path: 'admin/hoteles/addHotel',
@@ -71,6 +65,10 @@ const routes: Routes = [
     component: ReservasAdminComponent
   },
   {
+    path: 'admin/usuarios',
+    component: UsuariosComponent
+  },
+  {
     path: 'reserva',
     component: AddreservaUserComponent
   },
@@ -95,8 +93,16 @@ const routes: Routes = [
     component: InfoReservasAdminComponent
   },
   {
+    path: 'admin/usuarios/:id',
+    component: InfoUsuariosComponent
+  },
+  {
     path: 'home',
     component: HomeComponent
+  },
+  {
+    path: 'profile',
+    component: AccountComponent
   }
 
 ];
