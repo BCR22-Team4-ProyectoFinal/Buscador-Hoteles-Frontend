@@ -8,7 +8,7 @@ import { Habitaciones } from 'src/app/models/habitaciones.model';
 })
 export class BuscadorItemComponent implements OnInit {
 
-  @Input() habitacion:any[] = [];
+  @Input() habitacion: any[] = [];
 
   constructor() { }
 

@@ -8,7 +8,6 @@ import { HomeComponent } from './components/public/home/home.component';
 import { LoginComponent } from './components/public/login/login.component';
 import { AddreservaUserComponent } from './components/users/addreserva-user/addreserva-user.component';
 
-import { BuscadorInicioComponent } from './components/public/buscador-inicio/buscador-inicio.component';
 import { BuscadorMapaComponent } from './components/public/buscador-mapa/buscador-mapa.component';
 import { HabitacionesAdminComponent } from './components/admin/habitaciones-admin/habitaciones-admin.component';
 import { InfoHabitacionesAdminComponent } from './components/admin/info-habitaciones-admin/info-habitaciones-admin.component';
