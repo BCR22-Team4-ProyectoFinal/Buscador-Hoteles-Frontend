@@ -24,6 +24,8 @@ import { InfoPoblacionesAdminComponent } from './components/admin/info-poblacion
 import { AccountComponent } from './components/users/account/account.component';
 import { UsuariosComponent } from './components/admin/usuarios/usuarios.component';
 import { InfoUsuariosComponent } from './components/admin/info-usuarios/info-usuarios.component';
+import { BuscadorItemComponent } from './components/public/buscador-item/buscador-item.component';
+import { BuscadorMapaComponent } from './components/public/buscador-mapa/buscador-mapa.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import { InfoUsuariosComponent } from './components/admin/info-usuarios/info-usu
     InfoPoblacionesAdminComponent,
     AccountComponent,
     UsuariosComponent,
-    InfoUsuariosComponent
+    InfoUsuariosComponent,
+    BuscadorItemComponent,
+    BuscadorMapaComponent
   ],
   imports: [
     BrowserModule,

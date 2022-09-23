@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class BuscadorItemComponent implements OnInit {
 
-  @Input() habitacion = null;
+  @Input() habitacion: any[] = [];
 
   constructor() { }
 
