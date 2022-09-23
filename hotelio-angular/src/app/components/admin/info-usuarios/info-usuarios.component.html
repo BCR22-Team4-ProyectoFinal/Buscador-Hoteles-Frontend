@@ -1,0 +1,46 @@
+<div class="m-2">
+  <div class="row justify-content-center">
+    <div class="col-3 p-2 text-start border-start border-2">
+      <form>
+        <div class="form-group">
+          <label for="nombreUsuario">Usuario</label>
+          <input type="text" class="form-control" id="nombreUsuario" [(ngModel)]="usuario.nombreUsuario" name="nombreUsuario">
+        </div>
+        <div class="form-group">
+          <label for="rol">Rol</label>
+          <input type="text" class="form-control" id="rol" [(ngModel)]="usuario.rol" name="rol">
+        </div>
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" class="form-control" id="nombre" [(ngModel)]="usuario.nombre" name="nombre">
+        </div>
+        <div class="form-group">
+          <label for="apellidos">Apellidos</label>
+          <input type="text" class="form-control" id="apellidos" [(ngModel)]="usuario.apellidos" name="apellidos">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text" class="form-control" id="email" [(ngModel)]="usuario.email" name="email">
+        </div>
+        <div class="form-group">
+          <label for="dni">DNI</label>
+          <input type="text" class="form-control" id="dni" [(ngModel)]="usuario.dni" name="dni">
+        </div>
+        <div class="form-group">
+          <label for="telefono">Telefono</label>
+          <input type="text" class="form-control" id="telefono" [(ngModel)]="usuario.telefono" name="telefono">
+        </div>
+        <div class="form-group">
+          <label for="genero">Genero</label>
+          <input type="text" class="form-control" id="genero" [(ngModel)]="usuario.genero" name="genero">
+        </div>
+        <div class="form-group">
+          <label for="fechaNacimiento">Fecha de nacimiento</label>
+          <input type="text" class="form-control" id="fechaNacimiento" [(ngModel)]="usuario.fechaNacimiento" name="fechaNacimiento">
+        </div>
+      </form>
+      <button type="submit" class="badge text-bg-success m-2" >Update</button>
+      <p class="text-success"></p>
+    </div>
+  </div>
+</div>

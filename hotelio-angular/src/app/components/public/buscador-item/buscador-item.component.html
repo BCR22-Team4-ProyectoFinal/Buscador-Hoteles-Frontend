@@ -1,0 +1,37 @@
+<p>Hotelio search</p>
+
+<div class="row mb-3 border p-2" *ngFor="let h of habitacion">
+    <td>
+
+        <div id="comic" style="color:aqua">
+            <div class="row">
+
+                <div id="div1" class="col-8">NOMBRE DEL HOTEL&nbsp;{{h.hotel.nombre}}</div>
+                <div id="div8" class="col-4">estrellas (*****)&nbsp;{{h.hotel.categoria}}</div>
+
+            </div>
+
+            <div class="row">
+                <div id="div4" class="col-12">localidad&nbsp;{{h.hotel.poblacion.nombre}}</div>
+            </div>
+
+            <div class="row pt-5">
+                <div id="div2" class="col-4">HABITACIONES</div>
+                <div id="div1" class="col-4">numPers</div>
+                <div id="div8" class="col-4">Precio/noche</div>
+            </div>
+
+            <div class="row">
+                <div id="div10" class="col-4">{{h.num_habitacion}}</div>
+                <div id="div9" class="col-4">{{h.num_personas}}</div>
+                <div id="div4" class="col-4">{{h.precio_noche}}</div>
+            </div>
+
+            <div class="row pt-4">
+                <div class="col-6"><button type="button" class="btn btn-primary">Reservar</button></div>
+
+            </div>
+        </div>
+
+    </td>
+</div>

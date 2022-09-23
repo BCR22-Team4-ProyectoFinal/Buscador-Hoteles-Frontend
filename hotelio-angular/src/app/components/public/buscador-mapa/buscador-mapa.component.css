@@ -1,0 +1,59 @@
+
+
+#container {
+  padding-top: 25px;
+  padding-bottom: 40px;
+}
+
+#tilt {
+  padding-right: 45px;
+}
+
+#chart {
+  padding-left: 80px;
+}
+
+#spacer {
+  padding-top: 150px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: whitesmoke;
+}
+
+/* image background*/
+body{
+  background: url("../../../sources/Searchs_132.png");
+}
+
+#div1,
+#div2 {
+    border: 1px solid white;
+    border-bottom: 2px;
+    border-right: 2px;
+
+}
+
+#div4 {
+    border: 1px solid white;
+
+}
+
+#div8 {
+    border: 1px solid white;
+    border-bottom: 2px;
+
+}
+
+#div9,
+#div10 {
+    border: 1px solid white;
+    border-right: 2px;
+
+}
+
+#comic{
+    font-family: 'Comic Sans MS';
+}
+
+
+
+

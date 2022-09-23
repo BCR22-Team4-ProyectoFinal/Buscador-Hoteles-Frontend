@@ -1,0 +1,123 @@
+<body>
+
+    <div id="container">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col-7">
+                <div class="input-group input-group-lg">
+                    <span class="input-group-text" id="inputGroup-sizing-lg">¿Adónde te gustaría ir?</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input"
+                        aria-describedby="inputGroup-sizing-lg"
+                        placeholder="ejemplo: Miami Beach, Ciudad del Cabo, Río de Janeiro" [(ngModel)]="poblacion"/>
+                </div>
+            </div>
+            <div class="col-1"><button type="button" class="btn btn-danger btn-lg" (click)="filtrar()">SEARCH</button></div>
+            <div class="col"></div>
+        </div>
+    </div><!-- container -->
+
+    <!-- charts -->
+    <div id="chart" class="row text-info">
+        <div class="col"></div>
+
+        <div class="col-5">SELECCIONAR CATEGORÍAS **** </div>
+        <div class="col-4">MARGENES PRECIO 199-299-399-599-600</div>
+
+        <div class="col"></div>
+    </div>
+    <!--charts -->
+
+    <div id="tilt" class="text-info">
+
+        <div class="row">
+            <div class="col"></div>
+
+            <div class="form-check col-5">
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                    <label class="form-check-label" for="inlineCheckbox1">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                    <label class="form-check-label" for="inlineCheckbox2">2</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3">
+                    <label class="form-check-label" for="inlineCheckbox3">3</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox4" checked value="option4">
+                    <label class="form-check-label" for="inlineCheckbox4">4</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option5">
+                    <label class="form-check-label" for="inlineCheckbox5">5</label>
+                </div>
+
+            </div>
+
+            <div class="form-check col-5">
+
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                        value="option1">
+                    <label class="form-check-label" for="inlineRadio1">1</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                        value="option2">
+                    <label class="form-check-label" for="inlineRadio2">2</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                        value="option3">
+                    <label class="form-check-label" for="inlineRadio3">3</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" checked
+                        value="option4">
+                    <label class="form-check-label" for="inlineRadio4">4</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5"
+                        value="option5">
+                    <label class="form-check-label" for="inlineRadio5">5</label>
+                </div>
+
+                <div class="col"></div>
+            </div>
+
+        </div>
+
+    </div><!-- tilt -->
+
+    <div class="row pt-4">
+        <div class="col-2"></div>
+
+        <iframe height="400" frameborder="4" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas"
+            src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=technoparc%20reus%20Reus+(t-systems%20iberica%20sau)&amp;t=p&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+            class="col-2">
+        </iframe>
+        <div id="comic" class="col-6" style="color:aqua">
+        <!-- aqui empieza la interpolación de las entradas con la directiva *ngFor en el componente item -->      
+        <app-buscador-item [habitacion]="habitacionesFiltradas"></app-buscador-item>
+        <!-- aqui termina la interpolación de las entradas con la directiva *ngFor en el componente item -->
+        </div>
+        <div class="col-2"></div>
+    </div>
+
+
+    <!-- charts -->
+    <div class="row text-info">
+        <div class="col"></div>
+
+        <div class="col-8 pt-4 pb-3">
+            <h3>Total habitaciones encontradas:&nbsp;<span style="color:khaki">{{habitacionesFiltradas.length}}</span></h3>
+        </div>
+
+        <div class="col"></div>
+    </div>
+    <!--charts -->
+
+</body>
