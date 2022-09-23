@@ -8,7 +8,7 @@
                     <span class="input-group-text" id="inputGroup-sizing-lg">¿Adónde te gustaría ir?</span>
                     <input type="text" class="form-control" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-lg"
-                        placeholder="ejemplo: Miami Beach, Ciudad del Cabo, Río de Janeiro" />
+                        placeholder="ejemplo: Miami Beach, Ciudad del Cabo, Río de Janeiro" [(ngModel)]="poblacion" />
                 </div>
             </div>
             <div class="col-1"><button type="button" class="btn btn-danger btn-lg">SEARCH</button></div>
@@ -100,8 +100,8 @@
             class="col-2">
         </iframe>
         <div id="comic" class="col-6" style="color:aqua">
-        <!-- aqui empieza la interpolación de las entradas con la directiva *ngFor en el componente item -->      
-        <app-buscador-item [habitacion]="null"></app-buscador-item>
+        <!-- aqui empieza la interpolación de las entradas con la directiva *ngFor en el componente item -->
+          <app-buscador-item [habitacion]="habitaciones"></app-buscador-item>
         <!-- aqui termina la interpolación de las entradas con la directiva *ngFor en el componente item -->
         </div>
         <div class="col-2"></div>

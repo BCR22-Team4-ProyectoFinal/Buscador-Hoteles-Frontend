@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Habitaciones } from 'src/app/models/habitaciones.model';
 
 @Component({
   selector: 'app-buscador-item',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class BuscadorItemComponent implements OnInit {
 
-  @Input() habitacion = null;
+  @Input() habitacion:any[] = [];
 
   constructor() { }
 

@@ -9,12 +9,13 @@ import { HabitacionesService } from 'src/app/services/habitaciones.service';
 })
 export class BuscadorMapaComponent implements OnInit {
 
-  habitaciones?: Habitaciones[];
+  habitaciones: any[] = [];
+  poblacion:any;
 
   constructor(private habitacionesService: HabitacionesService) { }
 
   ngOnInit(): void {
-
+    this.listarHabitaciones();
   }
 
   listarHabitaciones(): void { /* methods implementation  */
