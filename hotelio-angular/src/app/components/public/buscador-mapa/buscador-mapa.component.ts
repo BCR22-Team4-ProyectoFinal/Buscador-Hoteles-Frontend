@@ -8,29 +8,33 @@ import { HabitacionesService } from 'src/app/services/habitaciones.service';
 })
 export class BuscadorMapaComponent implements OnInit {
 
+  public load: boolean = false;
 
   habitaciones: any[] = [];
   @Input() poblacion: any;
-  habitacionesFiltradas: Array <any> = [];
+  habitacionesFiltradas: Array<any> = [];
 
-  constructor(private habitacionesService: HabitacionesService) {}
+  constructor(private habitacionesService: HabitacionesService) { }
 
   ngOnInit(): void {
+    setTimeout(() => {
+      this.load = true;
+    }, 5000);
     this.filtrar();
     this.listarHabitaciones();
 
   }
 
   listarHabitaciones(): void { /* methods implementation  */
-  this.habitacionesService.getAll()
-    .subscribe(
-      data => {
-        this.habitaciones = data;
-        console.log(data);
-      },
-      error => {
-        console.log(error);
-      });
+    this.habitacionesService.getAll()
+      .subscribe(
+        data => {
+          this.habitaciones = data;
+          console.log(data);
+        },
+        error => {
+          console.log(error);
+        });
   }
 
   filtrar(): void {
