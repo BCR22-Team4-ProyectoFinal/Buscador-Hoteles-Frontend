@@ -8,14 +8,17 @@ import { HabitacionesService } from 'src/app/services/habitaciones.service';
 })
 export class BuscadorMapaComponent implements OnInit {
 
+  @Input()
+  poblacion: any = 'amposta';
+
   habitaciones: any[] = [];
-  poblacion: any;
   habitacionesFiltradas: Array <any> = [];
 
-  constructor(private habitacionesService: HabitacionesService) { }
+  constructor(private habitacionesService: HabitacionesService) {}
 
   ngOnInit(): void {
     this.listarHabitaciones()
+    this.filtrar()
   }
 
   listarHabitaciones(): void { /* methods implementation  */
