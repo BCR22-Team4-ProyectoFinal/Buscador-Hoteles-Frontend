@@ -3,8 +3,8 @@
   - **Nombre:** HOTELIO SEARCH<br>
   - **Descripción de la aplicación:** *Buscador de hoteles con sistema de lógin y registro de usuarios/administrador, filtrado de entradas por categoría y rango de precio, administración user/admin de perfil y reservas.* <br>
 - **URL del proyecto:** (deploy): https://deploy.dtbftq5mx9zhi.amplifyapp.com/<br> 
-  - **Credenciales usuario:** username janedoe password: 2222 <br>
-  - **Credenciales admins:** username johndoe password: 1111 <br>
+  - **Credenciales usuario:** username: janedoe password: 2222 <br>
+  - **Credenciales admins:** username: johndoe password: 1111 <br>
 
 
 
