@@ -99,10 +99,11 @@
             src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=technoparc%20reus%20Reus+(t-systems%20iberica%20sau)&amp;t=p&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
             class="col-2">
         </iframe>
-        <div id="comic" class="col-6" style="color:aqua">
-        <!-- aqui empieza la interpolación de las entradas con la directiva *ngFor en el componente item -->
-        <app-buscador-item [habitacion]="habitacionesFiltradas"></app-buscador-item>
-        <!-- aqui termina la interpolación de las entradas con la directiva *ngFor en el componente item -->
+          <div id="comic" class="col-6" style="color:aqua">
+          <!-- aqui empieza la interpolación de las entradas con la directiva *ngFor en el componente item -->
+          <app-buscador-item [habitacion]="habitacionesFiltradas" *ngIf="poblacion != undefined else todas"></app-buscador-item>
+          <ng-template #todas><app-buscador-item [habitacion]="habitaciones" #todas></app-buscador-item></ng-template>
+          <!-- aqui termina la interpolación de las entradas con la directiva *ngFor en el componente item -->
         </div>
         <div class="col-2"></div>
     </div>

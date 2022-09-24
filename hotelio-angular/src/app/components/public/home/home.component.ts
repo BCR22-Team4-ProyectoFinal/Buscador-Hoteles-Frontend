@@ -9,12 +9,18 @@ import { TokenStorageService } from 'src/app/services/login/token-storage.servic
 export class HomeComponent implements OnInit {
 
   isLoggedIn=false;
+  isSearching = false;
+  poblacion:any;
   constructor(private tokenStorageService: TokenStorageService) { }
 
   ngOnInit(): void {
     if (this.tokenStorageService.getToken()) {
       this.isLoggedIn = true;
     }
+  }
+
+  buscar(){
+    this.isSearching=true;
   }
 
 }
