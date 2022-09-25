@@ -19,7 +19,7 @@ export class BuscadorMapaComponent implements OnInit {
   ngOnInit(): void {
     setTimeout(() => {
       this.load = true;
-    }, 5000);
+    }, 1000);
     this.filtrar();
     this.listarHabitaciones();
 
