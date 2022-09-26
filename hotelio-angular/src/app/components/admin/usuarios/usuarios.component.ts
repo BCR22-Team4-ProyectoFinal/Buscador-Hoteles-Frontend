@@ -20,12 +20,15 @@ export class UsuariosComponent implements OnInit {
   }
 
   deleteUser(id:any){
-    this.usuariosService.delete(id).subscribe();
-    setTimeout(
-      ()=>{
-        window.location.reload();
-      }
-    ,1000);
+    if (confirm("Seguro que quieres borrar este usuario?")) {
+      this.usuariosService.delete(id).subscribe();
+      setTimeout(
+        ()=>{
+          window.location.reload();
+        }
+      ,1000);
+    }
+
   }
 
 }

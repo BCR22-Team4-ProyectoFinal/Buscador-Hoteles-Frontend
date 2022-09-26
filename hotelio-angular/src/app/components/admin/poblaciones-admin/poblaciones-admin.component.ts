@@ -21,13 +21,14 @@ export class PoblacionesAdminComponent implements OnInit {
   }
 
   deletePoblacion(id:any){
-    this.poblacionesService.delete(id).subscribe()
-    setTimeout(
-      ()=>{
-        window.location.reload();
-      }
-    ,1000);
-
+    if (confirm("Seguro que quieres borrar esta poblacion?")) {
+      this.poblacionesService.delete(id).subscribe()
+      setTimeout(
+        ()=>{
+          window.location.reload();
+        }
+      ,1000);
+    }
   }
 
 }
