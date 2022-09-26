@@ -1,0 +1,71 @@
+<div class="row m-2">
+  <div class="col-lg-4">
+    <div class="card mb-4">
+      <div class="card-body text-center">
+        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava3.webp" alt="avatar"
+          class="rounded-circle img-fluid" style="width: 150px;">
+        <h5 class="my-3">{{user.nombreUsuario}}</h5>
+      </div>
+      <div class="text-center mb-3">
+        <button class="btn btn-primary w-50" routerLink="/profile" (click)="guardar()">Guardar</button>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-8">
+    <div class="card mb-4">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm-3">
+            <p class="mb-0">Nombre</p>
+          </div>
+          <div class="col-sm-9">
+            <input class="text-muted mb-0" [(ngModel)]="user.nombre">
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-sm-3">
+            <p class="mb-0">Apellidos</p>
+          </div>
+          <div class="col-sm-9">
+            <input class="text-muted mb-0" [(ngModel)]="user.apellidos">
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-sm-3">
+            <p class="mb-0">DNI</p>
+          </div>
+          <div class="col-sm-9">
+            <input class="text-muted mb-0" [(ngModel)]="user.dni">
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-sm-3">
+            <p class="mb-0">Email</p>
+          </div>
+          <div class="col-sm-9">
+            <input class="text-muted mb-0" [(ngModel)]="user.email">
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-sm-3">
+            <p class="mb-0">Telefono</p>
+          </div>
+          <div class="col-sm-9">
+            <input class="text-muted mb-0" [(ngModel)]="user.telefono">
+          </div>
+        </div>
+        <hr>
+        <div class="row">
+          <div class="col-sm-3">
+            <p class="mb-0">Fecha de nacimiento (yyyy-MM-dd)</p>
+          </div>
+          <div class="col-sm-9">
+            <input class="text-muted mb-0" [(ngModel)]="fecha[0]">
+          </div>
+        </div>
+      </div>
+    </div>

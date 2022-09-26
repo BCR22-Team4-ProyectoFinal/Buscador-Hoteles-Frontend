@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TokenStorageService } from 'src/app/services/login/token-storage.service';
+import { UsuariosService } from 'src/app/services/usuarios.service';
 
 @Component({
   selector: 'app-account',
@@ -11,11 +12,15 @@ export class AccountComponent implements OnInit {
 
   rol:any;
   url:any;
-  constructor(private tokenStorageService: TokenStorageService,private router:Router) { }
+  username :any;
+  user:any;
+  constructor(private tokenStorageService: TokenStorageService,private router:Router, private userService:UsuariosService) { }
 
   ngOnInit(): void {
     this.rol =this.tokenStorageService.getRoles();
+    this.username = this.tokenStorageService.getUser();
     this.route();
+    this.loadUser();
   }
 
   route(){
@@ -26,6 +31,15 @@ export class AccountComponent implements OnInit {
     {
       this.url = '/home';
     }
+  }
+
+  loadUser(){
+    this.userService.getByUsername(this.username).subscribe(
+      data => {
+        console.log(data);
+        this.user = data;
+      }
+    )
   }
 
 }

@@ -16,6 +16,11 @@ export class LoginComponent implements OnInit {
     username: null,
     password: null
   };
+  form2:any = {
+    username: null,
+    password: null,
+    email: null
+  };
   isLoggedIn = false;
   isLoginFailed = false;
   errorMessage = '';
@@ -59,6 +64,10 @@ export class LoginComponent implements OnInit {
 
   }
 
+  singUp(){
+    this.authService.register(this.form2.username,this.form2.password,this.form2.email).subscribe();
+  }
+
 
   reloadPage() {
     window.location.reload();
@@ -66,7 +75,6 @@ export class LoginComponent implements OnInit {
 
 
   addClass(){
-    console.log(this.container)
     this.container.classList.add("right-panel-active");
   }
 

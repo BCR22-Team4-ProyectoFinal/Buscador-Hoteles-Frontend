@@ -110,6 +110,6 @@
 
   </div>
 </div>
-<div *ngIf="isSearching">
+<div *ngIf="isSearching && isLoggedIn">
   <app-buscador-mapa [poblacion]="poblacion"></app-buscador-mapa>
 </div>

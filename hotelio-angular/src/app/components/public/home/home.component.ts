@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { TokenStorageService } from 'src/app/services/login/token-storage.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class HomeComponent implements OnInit {
   isLoggedIn=false;
   isSearching = false;
   poblacion:any;
-  constructor(private tokenStorageService: TokenStorageService) { }
+  constructor(private tokenStorageService: TokenStorageService, private router:Router) { }
 
   ngOnInit(): void {
     if (this.tokenStorageService.getToken()) {
@@ -20,7 +21,13 @@ export class HomeComponent implements OnInit {
   }
 
   buscar(){
-    this.isSearching=true;
+    if (!this.isLoggedIn) {
+      window.alert("Para poder buscar hotel debes loguearte")
+      this.router.navigate(['/','login'])
+    }else{
+      this.isSearching=true;
+    }
+
   }
 
 }

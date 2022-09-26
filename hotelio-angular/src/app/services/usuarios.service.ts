@@ -23,8 +23,8 @@ export class UsuariosService {
     return this.http.post(apiUrl,datos);
   }
 
-  update(id:any,datos:any):Observable<any>{
-    return this.http.put(`${apiUrl}/${id}`,datos);
+  update(id:any,datos:any,headers:any):Observable<any>{
+    return this.http.put(`${apiUrl}/${id}`,JSON.stringify(datos),headers);
   }
 
   delete(id:any):Observable<any>{
