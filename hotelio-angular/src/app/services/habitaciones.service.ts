@@ -1,8 +1,9 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
 const apiUrl = 'https://app-mysql-database.herokuapp.com/api/habitaciones'
+const httpOptions = { headers: new HttpHeaders({'Content-Type': 'application/json'})}
 
 @Injectable({
   providedIn: 'root'
@@ -20,7 +21,7 @@ export class HabitacionesService {
   }
 
   create(datos:any): Observable<any>{
-    return this.http.post(apiUrl,datos);
+    return this.http.post(apiUrl, JSON.stringify(datos), httpOptions);
   }
 
   update(id:any,datos:any):Observable<any>{

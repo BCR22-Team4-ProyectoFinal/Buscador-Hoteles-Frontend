@@ -1,12 +1,12 @@
   <div class="row mt-2" *ngIf="rol =='ADMIN'">
-      <div class="col-2 vh-100 bg-danger">
+      <div id="navbar" class="col-2 vh-100 bg-danger">
           <nav class="navbar navbar-expand-lg">
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                   <span class="navbar-toggler-icon"></span>
               </button>
               <ul class="flex-column navbar-nav">
                   <li class="nav-item mb-2">
-                      <a class="nav-link active fs-4" routerLink="admin">Dashboard</a>
+                      <a class="nav-link fs-4" routerLink="admin">Dashboard</a>
                   </li>
                   <li class="nav-item mb-2">
                       <a class="nav-link fs-4" routerLink="reservas">Reservas</a>
@@ -27,6 +27,7 @@
           </nav>
       </div>
       <div class="col">
+        <h1>DASHBOARD</h1>
           <div class="row">
             <div class="col-6 mb-1">
               <div class="card m-1" style="width: 18rem">

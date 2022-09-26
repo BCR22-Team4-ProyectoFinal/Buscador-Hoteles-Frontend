@@ -1,3 +1,12 @@
 .dropend:hover .dropdown-menu {
   display: block;
 }
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  }
+
+#navbar{
+  background-color: #FF416C;
+}
