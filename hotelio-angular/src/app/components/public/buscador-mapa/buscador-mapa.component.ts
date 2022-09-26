@@ -34,14 +34,14 @@ export class BuscadorMapaComponent implements OnInit {
   }
 
   filtrar(): void {
-    this.habitacionesFiltradas = [];
+    this.habitaciones = [];
     this.habitacionesService.getAll()
       .subscribe(
         data => {
           for (let index = 0; index < data.length; index++) {
             const element = data[index];
             if (element["hotel"]["poblacion"]["nombre"].toLowerCase().includes(this.poblacion.toLowerCase())) {
-              this.habitacionesFiltradas.push(element)
+              this.habitaciones.push(element)
             }
 
           }
