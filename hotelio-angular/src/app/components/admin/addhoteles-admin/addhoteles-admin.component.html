@@ -23,7 +23,7 @@
         <label for="longitud">Longitud</label>
         <input type="text" name="longitud" id="longitud" class="form-control" required [(ngModel)]="hotel.longitud">
       </div>
-      <button  class="btn btn-success m-2">Submit</button>
+      <button  class="btn btn-success m-2" (click)="onSubmit()">Submit</button>
     </div>
 
     <div *ngIf="guardado">

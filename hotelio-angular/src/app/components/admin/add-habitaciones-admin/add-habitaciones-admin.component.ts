@@ -16,7 +16,19 @@ export class AddHabitacionesAdminComponent implements OnInit {
     precio_noche:'',
     num_personas:'',
     planta:'',
-    hotel:''
+    hotel:'',
+  }
+  hotelSeleccionado :any ={
+    id: '',
+    nombre: '',
+    categoria: '',
+    latitud: '',
+    longitud: '',
+    poblacion: {
+        id: '',
+        nombre: '',
+        cp: ''
+    }
   }
   hoteles:any[] = [];
   constructor(private hotelesService:HotelesService,private habitacionesService:HabitacionesService) { }
@@ -30,7 +42,8 @@ export class AddHabitacionesAdminComponent implements OnInit {
   }
 
   onSubmit(){
-    console.log(this.habitacion)
+    console.log(this.hotelSeleccionado.nombre)
+    this.habitacion.hotel = this.hotelSeleccionado;
     this.habitacionesService.create(this.habitacion).subscribe(
       data => {
         console.log(data);

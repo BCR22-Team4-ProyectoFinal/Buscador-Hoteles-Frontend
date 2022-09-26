@@ -1,5 +1,6 @@
 import { HttpHeaders } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { TokenStorageService } from 'src/app/services/login/token-storage.service';
 import { UsuariosService } from 'src/app/services/usuarios.service';
 
@@ -13,7 +14,8 @@ export class EditProfileComponent implements OnInit {
   user:any;
   username:any;
   fecha:any;
-  constructor(private tokenStorageService: TokenStorageService, private userService:UsuariosService) { }
+  fechaCompleta:any;
+  constructor(private tokenStorageService: TokenStorageService, private userService:UsuariosService,private router:Router) { }
 
   ngOnInit(): void {
     this.username = this.tokenStorageService.getUser();
@@ -24,14 +26,19 @@ export class EditProfileComponent implements OnInit {
       data => {
         console.log(data);
         this.user = data;
-        this.fecha = data["fechaNacimiento"].split('T');
+        this.fechaCompleta = data["fechaNacimiento"].split('T');
+        this.fecha = this.fechaCompleta[0];
       }
     )
   }
 
   guardar(){
     let headers = { headers: new HttpHeaders({'Content-Type': 'application/json'})};
-    this.user.fechaNacimiento = this.fecha[0];
+    this.user.fechaNacimiento = this.fecha;
     this.userService.update(this.user.id,this.user,headers).subscribe();
+
+    setTimeout(() => {
+      this.router.navigate(['/', 'profile']);
+    }, 2000);
   }
 }

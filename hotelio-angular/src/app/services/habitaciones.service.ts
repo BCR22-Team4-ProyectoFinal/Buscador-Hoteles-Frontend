@@ -20,7 +20,7 @@ export class HabitacionesService {
   }
 
   create(datos:any): Observable<any>{
-    return this.http.post(apiUrl,datos);
+    return this.http.post(apiUrl,JSON.stringify(datos), {headers:{'Content-Type': 'aplication/json'}});
   }
 
   update(id:any,datos:any):Observable<any>{

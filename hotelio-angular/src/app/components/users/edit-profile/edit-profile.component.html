@@ -7,7 +7,7 @@
         <h5 class="my-3">{{user.nombreUsuario}}</h5>
       </div>
       <div class="text-center mb-3">
-        <button class="btn btn-primary w-50" routerLink="/profile" (click)="guardar()">Guardar</button>
+        <button class="btn btn-primary w-50" (click)="guardar()">Guardar</button>
       </div>
     </div>
   </div>
@@ -64,7 +64,7 @@
             <p class="mb-0">Fecha de nacimiento (yyyy-MM-dd)</p>
           </div>
           <div class="col-sm-9">
-            <input class="text-muted mb-0" [(ngModel)]="fecha[0]">
+            <input class="text-muted mb-0" [(ngModel)]="fecha">
           </div>
         </div>
       </div>
