@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
   errorMessage = '';
   roles:any = null;
 
-  container = document.getElementById('container');
+  container:any;
 
   constructor(private authService: AuthService, private tokenStorageService: TokenStorageService,private router: Router) { }
 
@@ -29,6 +29,7 @@ export class LoginComponent implements OnInit {
     if (this.tokenStorageService.getToken()) {
       this.isLoggedIn = true;
     }
+    this.container = document.getElementById("contenedor");
   }
 
   onSubmit(): void{
@@ -66,11 +67,11 @@ export class LoginComponent implements OnInit {
 
   addClass(){
     console.log(this.container)
-    this.container?.classList.add("right-panel-active");
+    this.container.classList.add("right-panel-active");
   }
 
   removeClass(){
-    this.container?.classList.remove("right-panel-active");
+    this.container.classList.remove("right-panel-active");
   }
 
 }

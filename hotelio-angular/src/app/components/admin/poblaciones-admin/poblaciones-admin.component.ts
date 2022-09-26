@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { timeout } from 'rxjs';
 import { PoblacionesService } from 'src/app/services/poblaciones.service';
 
 @Component({
@@ -21,6 +22,12 @@ export class PoblacionesAdminComponent implements OnInit {
 
   deletePoblacion(id:any){
     this.poblacionesService.delete(id).subscribe()
+    setTimeout(
+      ()=>{
+        window.location.reload();
+      }
+    ,1000);
+
   }
 
 }

@@ -24,7 +24,6 @@ export class AppComponent {
   }
 
   home(){
-
     if (this.role == "ADMIN") {
       this.router.navigate(['/admin']);
     }

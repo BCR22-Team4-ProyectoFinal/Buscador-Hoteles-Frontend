@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Habitaciones } from 'src/app/models/habitaciones.model';
 
 @Component({
   selector: 'app-buscador-item',

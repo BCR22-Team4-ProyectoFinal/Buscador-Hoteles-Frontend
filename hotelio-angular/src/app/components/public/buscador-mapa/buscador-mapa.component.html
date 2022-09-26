@@ -8,10 +8,11 @@
                     <span class="input-group-text" id="inputGroup-sizing-lg">¿Adónde te gustaría ir?</span>
                     <input type="text" class="form-control" aria-label="Sizing example input"
                         aria-describedby="inputGroup-sizing-lg"
-                        placeholder="ejemplo: Miami Beach, Ciudad del Cabo, Río de Janeiro" [(ngModel)]="poblacion"/>
+                        placeholder="ejemplo: Miami Beach, Ciudad del Cabo, Río de Janeiro" [(ngModel)]="poblacion" />
                 </div>
             </div>
-            <div class="col-1"><button type="button" class="btn btn-danger btn-lg" (click)="filtrar()">SEARCH</button></div>
+            <div class="col-1"><button type="button" class="btn btn-danger btn-lg" (click)="filtrar()">SEARCH</button>
+            </div>
             <div class="col"></div>
         </div>
     </div><!-- container -->
@@ -100,20 +101,38 @@
             class="col-2">
         </iframe>
         <div id="comic" class="col-6" style="color:aqua">
-        <!-- aqui empieza la interpolación de las entradas con la directiva *ngFor en el componente item -->      
-        <app-buscador-item [habitacion]="habitacionesFiltradas"></app-buscador-item>
-        <!-- aqui termina la interpolación de las entradas con la directiva *ngFor en el componente item -->
+
+            <!-- spinner -->
+            <div class="overlay" *ngIf="!load">
+              <div class="position-absolute top-50 start-50 translate-middle">
+                <div class="spinner-border" role="status">
+                  <span class="visually-hidden">Loading...</span>
+                </div>
+              </div>
+            </div>
+            <div *ngIf="load">
+              <!-- aqui empieza la interpolación de las entradas con la directiva *ngFor en el componente item -->
+              <app-buscador-item [habitacion]="habitacionesFiltradas" *ngIf="poblacion != undefined else todas">
+              </app-buscador-item>
+              <ng-template #todas>
+                  <app-buscador-item [habitacion]="habitaciones" #todas></app-buscador-item>
+              </ng-template>
+              <!-- aqui termina la interpolación de las entradas con la directiva *ngFor en el componente item -->
+                Datos cargados correctamente
+            </div>
+            <!-- spinner -->
+
         </div>
         <div class="col-2"></div>
     </div>
-
 
     <!-- charts -->
     <div class="row text-info">
         <div class="col"></div>
 
         <div class="col-8 pt-4 pb-3">
-            <h3>Total habitaciones encontradas:&nbsp;<span style="color:khaki">{{habitacionesFiltradas.length}}</span></h3>
+            <h3>Total habitaciones encontradas:&nbsp;<span style="color:khaki">{{habitacionesFiltradas.length}}</span>
+            </h3>
         </div>
 
         <div class="col"></div>

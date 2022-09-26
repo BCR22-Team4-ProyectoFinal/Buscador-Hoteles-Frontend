@@ -8,47 +8,54 @@ import { HabitacionesService } from 'src/app/services/habitaciones.service';
 })
 export class BuscadorMapaComponent implements OnInit {
 
+  public load: boolean = false;
+
   habitaciones: any[] = [];
-  poblacion: any;
-  habitacionesFiltradas: Array <any> = [];
+  @Input() poblacion: any;
+  habitacionesFiltradas: Array<any> = [];
 
   constructor(private habitacionesService: HabitacionesService) { }
 
   ngOnInit(): void {
-    this.listarHabitaciones()
+    setTimeout(() => {
+      this.load = true;
+    }, 1000);
+    this.filtrar();
+    this.listarHabitaciones();
+
   }
 
   listarHabitaciones(): void { /* methods implementation  */
-  this.habitacionesService.getAll()
-    .subscribe(
-      data => {
-        this.habitaciones = data;
-        console.log(data);
-      },
-      error => {
-        console.log(error);
-      });
-}
+    this.habitacionesService.getAll()
+      .subscribe(
+        data => {
+          this.habitaciones = data;
+          console.log(data);
+        },
+        error => {
+          console.log(error);
+        });
+  }
 
-filtrar(): void { 
-this.habitacionesFiltradas = [];
-this.habitacionesService.getAll()
-  .subscribe(
-    data => {
-      for (let index = 0; index < data.length; index++) {
-        const element = data[index];
-        if (element["hotel"]["poblacion"]["nombre"].toLowerCase().includes(this.poblacion.toLowerCase())) {
-          this.habitacionesFiltradas.push(element)
-        }
-        
-      }
-      this.habitaciones = data;
-      console.log(data[0]["hotel"]["poblacion"]["nombre"]);
-    },
-    error => {
-      console.log(error);
-    });
-}
+  filtrar(): void {
+    this.habitacionesFiltradas = [];
+    this.habitacionesService.getAll()
+      .subscribe(
+        data => {
+          for (let index = 0; index < data.length; index++) {
+            const element = data[index];
+            if (element["hotel"]["poblacion"]["nombre"].toLowerCase().includes(this.poblacion.toLowerCase())) {
+              this.habitacionesFiltradas.push(element)
+            }
+
+          }
+          this.habitaciones = data;
+          console.log(data[0]["hotel"]["poblacion"]["nombre"]);
+        },
+        error => {
+          console.log(error);
+        });
+  }
 
 
 }

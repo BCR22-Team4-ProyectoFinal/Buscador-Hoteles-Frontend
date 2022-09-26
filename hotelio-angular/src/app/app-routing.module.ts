@@ -28,7 +28,7 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: 'public/mapa',
+    path: 'buscador',
     component: BuscadorMapaComponent
   },
   {
