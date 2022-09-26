@@ -26,6 +26,7 @@ import { UsuariosComponent } from './components/admin/usuarios/usuarios.componen
 import { InfoUsuariosComponent } from './components/admin/info-usuarios/info-usuarios.component';
 import { BuscadorItemComponent } from './components/public/buscador-item/buscador-item.component';
 import { BuscadorMapaComponent } from './components/public/buscador-mapa/buscador-mapa.component';
+import { EditProfileComponent } from './components/users/edit-profile/edit-profile.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { BuscadorMapaComponent } from './components/public/buscador-mapa/buscado
     UsuariosComponent,
     InfoUsuariosComponent,
     BuscadorItemComponent,
-    BuscadorMapaComponent
+    BuscadorMapaComponent,
+    EditProfileComponent
   ],
   imports: [
     BrowserModule,

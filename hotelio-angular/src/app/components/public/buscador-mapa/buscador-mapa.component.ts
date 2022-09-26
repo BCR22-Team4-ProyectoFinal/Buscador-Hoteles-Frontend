@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { HabitacionesService } from 'src/app/services/habitaciones.service';
+import { TokenStorageService } from 'src/app/services/login/token-storage.service';
 
 @Component({
   selector: 'app-buscador-mapa',
@@ -10,26 +11,29 @@ export class BuscadorMapaComponent implements OnInit {
 
   public load: boolean = false;
 
-  habitaciones: any[] = [];
   @Input() poblacion: any;
   habitacionesFiltradas: Array<any> = [];
 
-  constructor(private habitacionesService: HabitacionesService) { }
+  isLoggedIn= false;
+
+  constructor(private habitacionesService: HabitacionesService, private tokenStorageService: TokenStorageService) { }
 
   ngOnInit(): void {
+    if (this.tokenStorageService.getToken()) {
+      this.isLoggedIn = true;
+    }
     setTimeout(() => {
       this.load = true;
     }, 1000);
     this.filtrar();
     this.listarHabitaciones();
-
   }
 
   listarHabitaciones(): void { /* methods implementation  */
     this.habitacionesService.getAll()
       .subscribe(
         data => {
-          this.habitaciones = data;
+          this.habitacionesFiltradas = data;
           console.log(data);
         },
         error => {
@@ -49,8 +53,6 @@ export class BuscadorMapaComponent implements OnInit {
             }
 
           }
-          this.habitaciones = data;
-          console.log(data[0]["hotel"]["poblacion"]["nombre"]);
         },
         error => {
           console.log(error);

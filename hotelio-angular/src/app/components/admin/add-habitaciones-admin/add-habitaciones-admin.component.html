@@ -27,8 +27,9 @@
     </div>
 
     <div *ngIf="guardado">
-      <h4>Personaje guardado correctamente</h4>
-      <button class="btn btn-success" >Añadir</button>
+      <h4>Habitacion guardada correctamente</h4>
+      <button class="btn btn-success" (click)="onSubmit()">Añadir</button>
+      <a class="btn" href="/admin/habitaciones"> Volver</a>
     </div>
   </div>
 </div>

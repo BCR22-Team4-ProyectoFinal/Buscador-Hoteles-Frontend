@@ -1,10 +1,31 @@
 <div class="container" id="contenedor">
   <div class="form-container sign-up-container">
-    <form action="#">
-      <input type="text" placeholder="Name"/>
-      <input type="email" placeholder="Email" />
-      <input type="password" placeholder="Password" />
-      <button>Sign Up</button>
+    <form *ngIf="!isLoggedIn" name="form" (ngSubmit)="f.form.valid && singUp()" #f="ngForm">
+      <h1>Sign in</h1>
+      <div class="form-group">
+        <input type="text" placeholder="Username" class="form-control" name="username" [(ngModel)]="form2.username" #username="ngModel" required>
+        <div class="alert-danger" role="alert" *ngIf="username.errors && f.submitted">
+          <div *ngIf="username.errors?.['required']">Username is required</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="email" placeholder="Email" class="form-control" name="password" [(ngModel)]="form2.email" #password="ngModel" required/>
+        <div class="alert-danger" *ngIf="password.errors && f.submitted">
+          <div *ngIf="password.errors?.['required']">Password is required</div>
+          <div *ngIf="password.errors?.['minlength']">Password must be at least 6 characters</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="password" placeholder="Password" class="form-control" name="password" [(ngModel)]="form2.password" #password="ngModel" required/>
+        <div class="alert-danger" *ngIf="password.errors && f.submitted">
+          <div *ngIf="password.errors?.['required']">Password is required</div>
+          <div *ngIf="password.errors?.['minlength']">Password must be at least 6 characters</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <button>Sign up</button>
+      </div>
+
     </form>
   </div>
   <div class="form-container sign-in-container">

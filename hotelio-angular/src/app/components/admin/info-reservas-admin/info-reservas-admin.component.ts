@@ -23,4 +23,11 @@ export class InfoReservasAdminComponent implements OnInit {
       }
     );
   }
+
+  updateReserva(){
+    this.datosService.update(this.id, this.reserva).subscribe();
+    setTimeout(()=>{
+      this.router.navigate(['/admin','reservas'])
+    },1000)
+  }
 }

@@ -14,10 +14,20 @@ export class ReservasAdminComponent implements OnInit {
   ngOnInit(): void {
     this.reservasService.getAll().subscribe(
       data =>{
-        console.log(data)
         this.reservas = data;
       }
     )
+  }
+
+  deleteReserva(id:any){
+    if (confirm("Seguro que quieres borrar esta reserva?")) {
+      this.reservasService.delete(id).subscribe()
+      setTimeout(
+        ()=>{
+          window.location.reload();
+        }
+      ,1000);
+    }
   }
 
 }

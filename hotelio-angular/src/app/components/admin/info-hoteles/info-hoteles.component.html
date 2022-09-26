@@ -23,8 +23,7 @@
           <input type="text" class="form-control" id="longitud" [(ngModel)]="hotel.longitud" name="longitud">
         </div>
       </form>
-      <button class="badge text-bg-danger mr-1" >Delete</button>
-      <button type="submit" class="badge text-bg-success m-2" >Update</button>
+      <button type="submit" class="badge text-bg-success m-2" (click)="updateHotel()">Update</button>
       <p class="text-success"></p>
     </div>
   </div>

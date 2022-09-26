@@ -31,4 +31,11 @@ export class InfoHotelesComponent implements OnInit {
     );
   }
 
+  updateHotel(){
+    this.datosService.update(this.id, this.hotel).subscribe();
+    setTimeout(()=>{
+      this.router.navigate(['/admin','hoteles'])
+    },1000)
+  }
+
 }

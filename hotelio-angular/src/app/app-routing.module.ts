@@ -20,12 +20,17 @@ import { InfoReservasAdminComponent } from './components/admin/info-reservas-adm
 import { UsuariosComponent } from './components/admin/usuarios/usuarios.component';
 import { InfoUsuariosComponent } from './components/admin/info-usuarios/info-usuarios.component';
 import { AccountComponent } from './components/users/account/account.component';
+import { EditProfileComponent } from './components/users/edit-profile/edit-profile.component';
 
 const routes: Routes = [
   {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },
+  {
+    path: 'profile/edit',
+    component: EditProfileComponent
   },
   {
     path: 'buscador',

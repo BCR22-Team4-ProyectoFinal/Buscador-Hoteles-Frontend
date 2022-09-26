@@ -18,7 +18,7 @@ export class AddhotelesAdminComponent implements OnInit {
     latitud:''
   }
   poblaciones:any[] = [];
-
+  poblacion:any;
   constructor(private hotelesService:HotelesService,private poblacionesService:PoblacionesService) { }
 
   ngOnInit(): void {
@@ -30,12 +30,20 @@ export class AddhotelesAdminComponent implements OnInit {
   }
 
   onSubmit(){
-    console.log(this.hotel)
-    this.hotelesService.create(this.hotel).subscribe(
+    this.poblacionesService.get(this.hotel.poblacion).subscribe(
       data => {
-        console.log(data);
+        this.hotel.poblacion= data
       }
     )
+    setTimeout(()=>{
+      this.hotelesService.create(this.hotel).subscribe(
+        data => {
+          console.log(data);
+        }
+      )
+    }
+    ,1000)
+
   }
 
 }

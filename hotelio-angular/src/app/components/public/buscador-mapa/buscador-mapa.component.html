@@ -110,17 +110,18 @@
                 </div>
               </div>
             </div>
-            <div *ngIf="load">
+            <div *ngIf="load && isLoggedIn">
               <!-- aqui empieza la interpolación de las entradas con la directiva *ngFor en el componente item -->
               <app-buscador-item [habitacion]="habitacionesFiltradas" *ngIf="poblacion != undefined else todas">
               </app-buscador-item>
               <ng-template #todas>
-                  <app-buscador-item [habitacion]="habitaciones" #todas></app-buscador-item>
+                  <app-buscador-item [habitacion]="habitacionesFiltradas" #todas></app-buscador-item>
               </ng-template>
               <!-- aqui termina la interpolación de las entradas con la directiva *ngFor en el componente item -->
                 Datos cargados correctamente
             </div>
             <!-- spinner -->
+
 
         </div>
         <div class="col-2"></div>

@@ -14,10 +14,21 @@ export class UsuariosComponent implements OnInit {
   ngOnInit(): void {
     this.usuariosService.getAll().subscribe(
       data =>{
-        console.log(data)
         this.usuarios = data;
       }
     )
+  }
+
+  deleteUser(id:any){
+    if (confirm("Seguro que quieres borrar este usuario?")) {
+      this.usuariosService.delete(id).subscribe();
+      setTimeout(
+        ()=>{
+          window.location.reload();
+        }
+      ,1000);
+    }
+
   }
 
 }

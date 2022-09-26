@@ -4,7 +4,7 @@
       <form>
         <div class="form-group">
           <label for="nombreUsuario">Usuario</label>
-          <input type="text" class="form-control" id="nombreUsuario" [(ngModel)]="usuario.nombreUsuario" name="nombreUsuario">
+          <input type="text" class="form-control" id="nombreUsuario" [(ngModel)]="usuario.nombreUsuario" name="nombreUsuario" readonly>
         </div>
         <div class="form-group">
           <label for="rol">Rol</label>
@@ -12,34 +12,34 @@
         </div>
         <div class="form-group">
           <label for="nombre">Nombre</label>
-          <input type="text" class="form-control" id="nombre" [(ngModel)]="usuario.nombre" name="nombre">
+          <input type="text" class="form-control" id="nombre" [(ngModel)]="usuario.nombre" name="nombre" readonly>
         </div>
         <div class="form-group">
           <label for="apellidos">Apellidos</label>
-          <input type="text" class="form-control" id="apellidos" [(ngModel)]="usuario.apellidos" name="apellidos">
+          <input type="text" class="form-control" id="apellidos" [(ngModel)]="usuario.apellidos" name="apellidos" readonly>
         </div>
         <div class="form-group">
           <label for="email">Email</label>
-          <input type="text" class="form-control" id="email" [(ngModel)]="usuario.email" name="email">
+          <input type="text" class="form-control" id="email" [(ngModel)]="usuario.email" name="email" readonly>
         </div>
         <div class="form-group">
           <label for="dni">DNI</label>
-          <input type="text" class="form-control" id="dni" [(ngModel)]="usuario.dni" name="dni">
+          <input type="text" class="form-control" id="dni" [(ngModel)]="usuario.dni" name="dni" readonly>
         </div>
         <div class="form-group">
           <label for="telefono">Telefono</label>
-          <input type="text" class="form-control" id="telefono" [(ngModel)]="usuario.telefono" name="telefono">
+          <input type="text" class="form-control" id="telefono" [(ngModel)]="usuario.telefono" name="telefono" readonly>
         </div>
         <div class="form-group">
           <label for="genero">Genero</label>
-          <input type="text" class="form-control" id="genero" [(ngModel)]="usuario.genero" name="genero">
+          <input type="text" class="form-control" id="genero" [(ngModel)]="usuario.genero" name="genero" readonly>
         </div>
         <div class="form-group">
           <label for="fechaNacimiento">Fecha de nacimiento</label>
-          <input type="text" class="form-control" id="fechaNacimiento" [(ngModel)]="usuario.fechaNacimiento" name="fechaNacimiento">
+          <input type="text" class="form-control" id="fechaNacimiento" [(ngModel)]="usuario.fechaNacimiento" name="fechaNacimiento" readonly>
         </div>
       </form>
-      <button type="submit" class="badge text-bg-success m-2" >Update</button>
+      <button type="submit" class="badge text-bg-success m-2" (click)="updateUsuario()">Update</button>
       <p class="text-success"></p>
     </div>
   </div>

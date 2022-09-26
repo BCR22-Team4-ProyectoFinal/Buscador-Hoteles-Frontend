@@ -11,8 +11,7 @@
           <input type="text" class="form-control" id="categoria" [(ngModel)]="poblacion.cp" name="categoria">
         </div>
       </form>
-      <button class="badge text-bg-danger mr-1" >Delete</button>
-      <button type="submit" class="badge text-bg-success m-2" >Update</button>
+      <button type="submit" class="badge text-bg-success m-2" (click)="updatePoblacion()">Update</button>
       <p class="text-success"></p>
     </div>
   </div>

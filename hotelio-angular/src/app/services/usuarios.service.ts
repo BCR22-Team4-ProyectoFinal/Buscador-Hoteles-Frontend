@@ -1,8 +1,9 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
-const apiUrl = 'https://app-mysql-database.herokuapp.com/api/usuarios'
+const apiUrl = 'https://app-mysql-database.herokuapp.com/api/usuarios';
+const headers = { headers: new HttpHeaders({'Content-Type': 'application/json'})};
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +25,7 @@ export class UsuariosService {
   }
 
   update(id:any,datos:any):Observable<any>{
-    return this.http.put(`${apiUrl}/${id}`,datos);
+    return this.http.put(`${apiUrl}/${id}`,JSON.stringify(datos),headers);
   }
 
   delete(id:any):Observable<any>{
