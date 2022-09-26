@@ -30,6 +30,9 @@ export class HabitacionesAdminComponent implements OnInit {
         }
       )
     }
+    setTimeout(()=>{
+      window.location.reload()
+    },1000)
   }
 
   reloadPage(){

@@ -14,7 +14,6 @@ export class ReservasAdminComponent implements OnInit {
   ngOnInit(): void {
     this.reservasService.getAll().subscribe(
       data =>{
-        console.log(data)
         this.reservas = data;
       }
     )

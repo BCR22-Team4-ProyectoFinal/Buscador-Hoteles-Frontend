@@ -19,4 +19,15 @@ export class HotelesAdminComponent implements OnInit {
     )
   }
 
+  deleteHotel(id:any){
+    let confirmacion = confirm("Seguro que quieres borrar el hotel?")
+    if (confirmacion) {
+      this.hotelService.delete(id).subscribe();
+      setTimeout(()=>{
+        window.location.reload()
+      },1000)
+    }
+
+  }
+
 }

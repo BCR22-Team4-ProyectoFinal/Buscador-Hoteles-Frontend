@@ -33,9 +33,9 @@ export class EditProfileComponent implements OnInit {
   }
 
   guardar(){
-    let headers = { headers: new HttpHeaders({'Content-Type': 'application/json'})};
+
     this.user.fechaNacimiento = this.fecha;
-    this.userService.update(this.user.id,this.user,headers).subscribe();
+    this.userService.update(this.user.id,this.user).subscribe();
 
     setTimeout(() => {
       this.router.navigate(['/', 'profile']);

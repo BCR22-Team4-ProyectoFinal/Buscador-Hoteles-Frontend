@@ -23,4 +23,11 @@ export class InfoPoblacionesAdminComponent implements OnInit {
     )
   }
 
+  updatePoblacion(){
+    this.datosService.update(this.id, this.poblacion).subscribe();
+    setTimeout(()=>{
+      this.router.navigate(['/admin','poblaciones'])
+    },1000)
+  }
+
 }

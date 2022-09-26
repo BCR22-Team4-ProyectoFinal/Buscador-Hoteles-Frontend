@@ -31,4 +31,11 @@ export class InfoHabitacionesAdminComponent implements OnInit {
     );
   }
 
+  updateHabitacion(){
+    this.datosService.update(this.id, this.habitacion).subscribe();
+    setTimeout(()=>{
+      this.router.navigate(['/admin','habitaciones'])
+    },1000)
+  }
+
 }

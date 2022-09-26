@@ -24,4 +24,11 @@ export class InfoUsuariosComponent implements OnInit {
       }
     );
   }
+
+  updateUsuario(){
+    this.datosService.update(this.id, this.usuario).subscribe();
+    setTimeout(()=>{
+      this.router.navigate(['/admin','usuarios'])
+    },1000)
+  }
 }
