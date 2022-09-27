@@ -1,7 +1,7 @@
 <div class="container" id="contenedor">
   <div class="form-container sign-up-container">
     <form *ngIf="!isLoggedIn" name="form" (ngSubmit)="f.form.valid && singUp()" #f="ngForm">
-      <h1>Sign in</h1>
+      <h1>Sign up</h1>
       <div class="form-group">
         <input type="text" placeholder="Username" class="form-control" name="username" [(ngModel)]="form2.username" #username="ngModel" required>
         <div class="alert-danger" role="alert" *ngIf="username.errors && f.submitted">
